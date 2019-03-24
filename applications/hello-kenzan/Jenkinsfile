@@ -14,11 +14,11 @@ node {
 
     stage "Build"
     
-        sh "sudo docker build -t ${imageName} part1/hello-kenzan"
+        sh "docker build -t ${imageName} part1/hello-kenzan"
     
     stage "Push"
 
-        sh "sudo docker push ${imageName}"
+        sh "docker push ${imageName}"
 
     stage "Deploy"
 
